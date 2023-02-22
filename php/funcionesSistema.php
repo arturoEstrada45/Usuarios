@@ -32,6 +32,9 @@ class Sistema
         $consultaDocument = mysqli_query($con,"INSERT INTO img(imagenID,imagenes,ticketID,tipo,nombre) VALUES ($numeroDatosIMG,'$documentContenido','$numeroDatos','$archivo_tipoDocument','$nombreDocument')");
         
         if($consulta3 && $consultaDocument){
+            $descripcion="Ticket de ".$correo;
+            $estadoNoti="No leido";
+            $ingresaNoti = mysqli_query($con,"INSERT INTO notificaciones(descripcion,estado,fecha) VALUES ('$descripcion','$estadoNoti','$fechaAlta')");
             header('location: ../vistas/levantarTicket.php?correo=' . $correo);
         }
         }catch (Exception $e){
@@ -53,6 +56,10 @@ class Sistema
        $consulta3 = mysqli_query($con,"INSERT INTO img(imagenID,imagenes,ticketID,tipo,nombre) VALUES ($numeroDatosIMG,'$imgContenido','$numeroDatos','$archivo_tipo','$nombre')");
        
         if($consulta3){
+            $descripcion="Ticket de ".$correo;
+            
+            $estadoNoti="No leido";
+            $ingresaNoti = mysqli_query($con,"INSERT INTO notificaciones(descripcion,estado,fecha) VALUES ('$descripcion','$estadoNoti','$fechaAlta')");
             header('location: ../vistas/levantarTicket.php?correo=' . $correo);
         }
         }catch (Exception $e){
@@ -76,6 +83,10 @@ class Sistema
         $consultaDocument = mysqli_query($con,"INSERT INTO img(imagenID,imagenes,ticketID,tipo,nombre) VALUES ($numeroDatosIMG,'$documentContenido','$numeroDatos','$archivo_tipoDocument','$nombreDocument')");
         
         if($consultaDocument){
+            $descripcion="Ticket de ".$correo;
+            
+            $estadoNoti="No leido";
+            $ingresaNoti = mysqli_query($con,"INSERT INTO notificaciones(descripcion,estado,fecha) VALUES ('$descripcion','$estadoNoti','$fechaAlta')");
             header('location: ../vistas/levantarTicket.php?correo=' . $correo);
         }
         }catch (Exception $e){
@@ -97,6 +108,9 @@ class Sistema
         $numeroDatosIMG= mysqli_num_rows($consulta4)+1;
         $consulta2 = mysqli_query($con,"INSERT INTO tickets(ticketID,asunto,descripcion,solicitanteID,estado,prioridad,soporteID,fechaAlta) VALUES ($numeroDatos,'$asunto','$descripcion','$correo','$estado','$prioridad','$soporteID','$fechaAlta')");
         if($consulta2){
+            $descripcion="Ticket de ".$correo;
+            $estadoNoti="No leido";
+            $ingresaNoti = mysqli_query($con,"INSERT INTO notificaciones(descripcion,estado,fecha) VALUES ('$descripcion','$estadoNoti','$fechaAlta')");
             header('location: ../vistas/levantarTicket.php?correo=' . $correo);
         }
         }catch (Exception $e){

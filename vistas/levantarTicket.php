@@ -54,7 +54,7 @@ $result = mysqli_query($conexion, $sql);
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block">
-                        <img src="../img/registroEmpleado.jpg" width="555" height="515">
+                        <img src="../img/registroEmpleado.jpg" width="505" height="515">
                     </div>
                     
                     <div class="col-lg-7">
