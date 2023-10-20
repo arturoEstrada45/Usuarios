@@ -35,7 +35,7 @@ class Sistema
             $descripcion="Ticket de ".$correo;
             $estadoNoti="No leido";
             $ingresaNoti = mysqli_query($con,"INSERT INTO notificaciones(descripcion,estado,fecha) VALUES ('$descripcion','$estadoNoti','$fechaAlta')");
-            header('location: ../vistas/levantarTicket.php?correo=' . $correo);
+            header('location: ../mail/contact_me.php?correo=' . $correo);
         }
         }catch (Exception $e){
             echo 'Excepción capturada: ',  $e->getMessage(), "\n";
@@ -60,7 +60,7 @@ class Sistema
             
             $estadoNoti="No leido";
             $ingresaNoti = mysqli_query($con,"INSERT INTO notificaciones(descripcion,estado,fecha) VALUES ('$descripcion','$estadoNoti','$fechaAlta')");
-            header('location: ../vistas/levantarTicket.php?correo=' . $correo);
+            header('location: ../mail/contact_me.php?correo=' . $correo);
         }
         }catch (Exception $e){
             echo 'Excepción capturada: ',  $e->getMessage(), "\n";
@@ -87,7 +87,7 @@ class Sistema
             
             $estadoNoti="No leido";
             $ingresaNoti = mysqli_query($con,"INSERT INTO notificaciones(descripcion,estado,fecha) VALUES ('$descripcion','$estadoNoti','$fechaAlta')");
-            header('location: ../vistas/levantarTicket.php?correo=' . $correo);
+            header('location: ../mail/contact_me.php?correo=' . $correo);
         }
         }catch (Exception $e){
             echo 'Excepción capturada: ',  $e->getMessage(), "\n";
@@ -111,7 +111,7 @@ class Sistema
             $descripcion="Ticket de ".$correo;
             $estadoNoti="No leido";
             $ingresaNoti = mysqli_query($con,"INSERT INTO notificaciones(descripcion,estado,fecha) VALUES ('$descripcion','$estadoNoti','$fechaAlta')");
-            header('location: ../vistas/levantarTicket.php?correo=' . $correo);
+            header('location: ../mail/contact_me.php?correo=' . $correo);
         }
         }catch (Exception $e){
             echo 'Excepción capturada: ',  $e->getMessage(), "\n";
