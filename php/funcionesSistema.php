@@ -20,7 +20,7 @@ class Sistema
         try{
         $consulta1 = mysqli_query($con, "SELECT * from tickets");
         $numeroDatos= mysqli_num_rows($consulta1)+1;
-        $soporteID="pruebas@intercarton.com.mx";
+        $soporteID="tickets@intercarton.com.mx";
         $estado="Activo";
         $fechaAlta=date('Y-m-d');
         
@@ -47,7 +47,7 @@ class Sistema
         try{
         $consulta1 = mysqli_query($con, "SELECT * from tickets");
         $numeroDatos= mysqli_num_rows($consulta1)+1;
-        $soporteID="pruebas@intercarton.com.mx";
+        $soporteID="tickets@intercarton.com.mx";
         $estado="Activo";
         $consulta4 = mysqli_query($con, "SELECT * from img");
         $numeroDatosIMG= mysqli_num_rows($consulta4)+1;
@@ -73,7 +73,7 @@ class Sistema
         try{
         $consulta1 = mysqli_query($con, "SELECT * from tickets");
         $numeroDatos= mysqli_num_rows($consulta1)+1;
-        $soporteID="pruebas@intercarton.com.mx";
+        $soporteID="tickets@intercarton.com.mx";
         $estado="Activo";
         $fechaAlta=date('Y-m-d');
         
@@ -100,7 +100,7 @@ class Sistema
         try{
         $consulta1 = mysqli_query($con, "SELECT * from tickets");
         $numeroDatos= mysqli_num_rows($consulta1)+1;
-        $soporteID="pruebas@intercarton.com.mx";
+        $soporteID="tickets@intercarton.com.mx";
         $estado="Activo";
         $fechaAlta=date('Y-m-d');
         
